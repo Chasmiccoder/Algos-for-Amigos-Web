@@ -6,7 +6,6 @@ node gitez.js IFINIRW
 
 Or, create an npm script using package.json and run it
 npm run gitez -- my commit message
-
 */
 
 const{exec} = require('child_process');
