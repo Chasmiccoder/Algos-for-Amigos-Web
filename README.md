@@ -1,2 +1,2 @@
 # Algos-for-Amigos-Web
-Algos for all Amigos  :D
+Algorithms animated and explained like magic :)

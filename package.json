@@ -1,0 +1,24 @@
+{
+  "name": "algos-for-amigos-web",
+  "version": "1.0.0",
+  "description": "Algorithms animated and explained like magic :)",
+  "main": "js/app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gitez": "node gitez.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chasmiccoder/Algos-for-Amigos-Web.git"
+  },
+  "keywords": [],
+  "author": "Aryaman Kolhe <chasmiccoder@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chasmiccoder/Algos-for-Amigos-Web/issues"
+  },
+  "homepage": "https://github.com/Chasmiccoder/Algos-for-Amigos-Web#readme"
+}
