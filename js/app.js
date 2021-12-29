@@ -44,7 +44,6 @@ function updateArray() {
     }
 
     console.log(main_array);
-
 }
 
 document.querySelector('#sortButton').onclick = swap;
@@ -61,59 +60,56 @@ function swap() {
     let rect1 = document.getElementById(e1).getBoundingClientRect();
     let rect2 = document.getElementById(e2).getBoundingClientRect();
 
-    // quick fix for when j's x value is lesser than i's
+    // when j's x value is lesser than i's
     if(rect2.right - rect1.right < 0) {
         let tmp = i;
         i = j;
         j = tmp;
         
-        let tmp2 = e2;
-        e2 = e1;
-        e1 = tmp2;
+        let tmp2 = e1;
+        e1 = e2;
+        e2 = tmp2;
 
         let tmp3 = rect1;
         rect1 = rect2;
         rect2 = tmp3;
     }
 
-    
-    // rough implementation of changing the array after the animation has happened
-    // FIXME
-    doAnim(function() {
-        doUpdate();
+    let distance = rect2.right - rect1.right;
+
+    swapAnim(e1, e2, distance).then(() => {
+        let tmp = main_array[i];
+        main_array[i] = main_array[j];
+        main_array[j] = tmp;
+        updateArray();
+        console.log("NOw", main_array);
     });
-
-    function doAnim(e1, e2, distance, callback) {
-        let distance = rect2.right - rect1.right;
-        moveElement(e1, distance);
-        moveElement(e2, -distance);
-        callback();
-    }
-
-    function doUpdate() {
-        // let tmp = main_array[i];
-        // main_array[i] = main_array[j];
-        // main_array[j] = tmp;
-        // updateArray();
-    }
 }
 
-// moves the element along the x axis by the given distance
-function moveElement(elementId, d) {
-
-    console.log(elementId,d);
-
-    let moveAnimation = anime({
-        targets: '#' + elementId,
+async function swapAnim(e1, e2, distance) {
+    let a1 = anime({
+        targets: '#' + e1,
         translateY: [
             {value: 100, duration: 1000}, // duration is in milliseconds
             {value: 0, duration: 1000}
         ],
         translateX: [
-            {value: d, duration: 1000}
+            {value: distance, duration: 1000}
         ],
         easing: 'easeInOutExpo'
-    });
+    }).finished;
+
+    let a2 = anime({
+        targets: '#' + e2,
+        translateY: [
+            {value: 100, duration: 1000},
+            {value: 0, duration: 1000}
+        ],
+        translateX: [
+            {value: -distance, duration: 1000}
+        ],
+        easing: 'easeInOutExpo'
+    }).finished;
+
+    await Promise.all([a1,a2]);         
 }
-
-
