@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Chasmiccoder/Algos-for-Amigos-Web/issues"
   },
-  "homepage": "https://github.com/Chasmiccoder/Algos-for-Amigos-Web#readme"
+  "homepage": "https://github.com/Chasmiccoder/Algos-for-Amigos-Web#readme",
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
 }

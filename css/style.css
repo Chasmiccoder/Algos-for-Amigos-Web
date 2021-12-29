@@ -1,0 +1,45 @@
+#boxes {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#btns {
+    padding: 20px;
+    background-color: lightblue;
+    margin-bottom: 20px;
+}
+
+#btns button {
+    padding: 5px 10px;
+    border: 0px;
+    font-size: 20px;
+}
+
+#btns .play {
+    background-color: lightgreen;
+}
+#btns .pause {
+    background-color: lightcoral;
+}
+
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 4px;
+    display: inline-block;
+}
+
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
