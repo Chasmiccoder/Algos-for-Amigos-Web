@@ -8,20 +8,20 @@
     <title>Algos for Amigos</title>
 </head>
 <body>
-    <div id="boxes">
-        <div id="btns">
-            <button class="play">Play</button>
-            <button class="pause">Pause</button>
-            <button id="swapBox">Swap Red-Blue</button> <!-- get position of the first (red) box-->
-        </div>
-        
-        <div class="box red" id="redBox"></div>
-        <div class="box blue" id="blueBox"></div>
-        <div class="box green"></div>
-        <div class="box yellow"></div>
+    <div class="inputParams">
+        <label for="insertNum">Enter a number:</label>
+        <input type="text" id="insertInput" name="insertNum">
+        <button id="insertButton">Insert</button>
+        <button id="sortButton">Sort!</button>
+    </div>
+
+    <br><br>
+
+    <div class="content">
+        <div id="mainArray"></div>
     </div>
     
-    <!-- <script src="./js/app.js"></script> -->
+    
     <script src="./dist/bundle.js"></script>
 </body>
 </html>
