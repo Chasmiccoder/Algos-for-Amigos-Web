@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/Chasmiccoder/Algos-for-Amigos-Web#readme",
   "dependencies": {
-    "animejs": "^3.2.1"
+    "animejs": "^3.2.1",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "babelify": "^10.0.0"
   }
 }
